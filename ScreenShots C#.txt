@@ -1,0 +1,41 @@
+Dados 18:
+
+El 8:
+Matríz de 8col x 10filas
+---oo---	y+0	x+4 x+5 x+6
+--oooo--	y+1 x+3 +4 +5 +6
+--------	--
+--------	--
+--oooo--	y+4 x+3 +4 5 6
+--oooo--	y+5 x+3 +4 5 6
+-o------	y+6 x+2
+-o----o-	y+7 x+2 +7
+--oooo--	y+8 x+3 +4 +5 6
+---oo---	y+9 x+4 +5
+
+Constitución:
+569,137 start
+Carisma: 569,114
+Inteligencia: 569,91
+Agilidad: 569,68
+Fuerza: 569,46
+
+
+CODIGO C#:
+==========
+using System.Drawing.Imaging;
+using System.Threading;
+...
+ImageFormat img;
+Bitmap bt;
+Graphics screenShot;
+
+private void button1_Click(object sender, EventArgs e)
+{
+	this.Hide();
+	Thread.Sleep(500);
+	bt = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, PixelFormat.Format32bppArgb);
+	screenShot = Graphics.FromImage(bt);
+	screenShot.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+	this.Show();
+}

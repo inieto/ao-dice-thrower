@@ -1,0 +1,8 @@
+Keyboard hook
+http://blogs.msdn.com/b/toub/archive/2006/05/03/589423.aspx
+
+Mouse hook:
+http://blogs.msdn.com/b/toub/archive/2006/05/03/589468.aspx
+
+API:
+http://www.codeproject.com/Articles/7294/Processing-Global-Mouse-and-Keyboard-Hooks-in-C
